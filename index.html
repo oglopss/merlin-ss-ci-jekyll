@@ -1,0 +1,19 @@
+---
+layout: page
+title: Recent Builds
+excerpt: "A simple and clean responsive Jekyll theme for words and photos."
+search_omit: true
+---
+
+<br>
+build #{{ site.data.ss.build }} <a href="https://travis-ci.org/oglopss/merlin-ss-ci"><img src="https://travis-ci.org/oglopss/merlin-ss-ci.svg" /></a>
+<ul>
+{% assign sorted_ss = site.data.ss.files | sort: | reverse %}
+{% for f in sorted_ss %}
+<li>
+    <a href="{{ site.url }}/download/shadowsocks-libev-{{ f }}.tar.gz"> shadowsocks-libev-{{ f }}.tar.gz</a>
+</li>
+{% endfor %}
+</ul>
+<br>
+<br>
